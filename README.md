@@ -94,3 +94,21 @@ Then the structure of a test should loosely follow this workflow:
 4. Create your inputs
 5. Execute the code being tested, capturing the output
 6. Compare the output with an expected result
+
+# Managing Python environments
+
+While both venv and pip are easy to use, they are very primitive when compared to more modern tools like Poetry and Pipenv. venv and pip know nothing about the version of Python it's working with. You have to manage all dependencies and virtual environments by hand. You have to create and manage the requirements.txt file yourself. What's more, you'll have to manually separate development (pytest, black, isort, ...) and production (Flask, Django, FastAPI, ..) dependencies using a requirements-dev.txt file.
+
+Poetry and Pipenv combine the functionality of venv and pip. They also make it easy to separate development and production dependencies as well as enable deterministic builds via a lock file. They work well with pyenv.
+
+# How to manage env
+
+1. First, create a new directory called "flask_example" and move inside it:
+
+        mkdir flask_example   
+        cd flask_example
+2. Second, set the Python version for the project with pyenv:
+
+    pyenv local 3.10.2
+
+
