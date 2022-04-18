@@ -111,4 +111,29 @@ Poetry and Pipenv combine the functionality of venv and pip. They also make it e
 
     pyenv local 3.10.2
 
+3. Next, initialize a new Python project with Poetry:
+
+        poetry init
+
+        Package name [flask_example]:
+        Version [0.1.0]:
+        Description []:
+        Author [Your name <your@email.com>, n to skip]:
+        License []:
+        Compatible Python versions [^3.10]:
+
+        Would you like to define your main dependencies interactively? (yes/no) [yes] no
+        Would you like to define your development dependencies interactively? (yes/no) [yes] no
+        Do you confirm generation? (yes/no) [yes]
+
+4. Add Flask:
+
+        poetry add flask
+
+        poetry add --dev pytest
+
+6. Now, to run the tests, run:
+
+        poetry run python -m pytest
+        poetry run python -m flask run
 
